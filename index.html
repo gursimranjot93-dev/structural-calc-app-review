@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1400, initial-scale=0.25, maximum-scale=5, user-scalable=yes" />
+  <title>Structural Calculation App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <button id="toggleSidebarBtn" class="menu-fab" title="Show or hide table of contents">☰</button>
+
+  <div id="app" class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div>
+          <div class="app-title">Structural Calculation App</div>
+          <div class="app-subtitle">Beam + Beam Design + Wind Build</div>
+        </div>
+      </div>
+
+      <div class="sidebar-toolbar">
+        <button id="saveProjectBtn" class="toolbar-btn">Save</button>
+        <button id="openProjectBtn" class="toolbar-btn">Open</button>
+        <input id="openProjectInput" type="file" accept="application/json" hidden />
+      </div>
+
+      <div id="toc" class="toc"></div>
+    </aside>
+
+    <main class="workspace">
+      <div id="workspaceHeader" class="workspace-header"></div>
+      <div id="workspaceBody" class="workspace-body"></div>
+    </main>
+  </div>
+
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+  <script src="libraries/beam-library-loader.js"></script>
+  <script src="js/modules.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/beam-state.js"></script>
+  <script src="js/wind-state.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/beam-design-engine.js"></script>
+  <script src="js/wind-engine.js"></script>
+  <script src="js/wind-overlay-engine.js"></script>
+  <script src="js/beam-ui.js"></script>
+  <script src="js/wind-overlay-ui.js"></script>
+  <script src="js/wind-ui.js"></script>
+  <script src="js/beam-controller.js"></script>
+  <script src="js/wind-controller.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
